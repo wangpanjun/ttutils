@@ -8,7 +8,7 @@ def trans_seconds(seconds):
     hour, min = min / 60, min % 60
     day, hour = hour / 24, hour % 24
 
-    print reduce(lambda x, y: "%d%s" % (y[1], TIME_CONSTANT[y[0]]) + x if y[1] > 0 else x,
+    return reduce(lambda x, y: "%d%s" % (y[1], TIME_CONSTANT[y[0]]) + x if y[1] > 0 else x,
                  enumerate([sec, min, hour, day]), "")
 
 
